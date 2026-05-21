@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Vendedor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/vendedor.css">
+</head>
+<body>
+
+    <div class="vendedor-container">
+        <h2 class="titulo-pagina">CADASTRO DO VENDEDOR</h2>
+
+        <form class="formulario-vendedor">
+            <div class="input-group">
+                <label for="nome-vendedor">NOME DO VENDEDOR</label>
+                <input type="text" id="nome-vendedor" required>
+            </div>
+
+            <div class="input-group">
+                <label for="celular-vendedor">NÚMERO DE CELULAR</label>
+                <input type="tel" id="celular-vendedor" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <div class="input-group select-wrapper">
+                <label for="equipe-vendedor">EQUIPE</label>
+                <select id="equipe-vendedor" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="equipe-alfa">Equipe Alfa</option>
+                    <option value="equipe-beta">Equipe Beta</option>
+                    <option value="equipe-omega">Equipe Ómega</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-salvar">SALVAR VENDEDOR</button>
+        </form>
+    </div>
+
+</body>
+</html>

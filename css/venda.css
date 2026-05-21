@@ -1,0 +1,178 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+body {
+    background-color: #E8B4B8; /* Cor externa para contraste */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Card Principal da Venda */
+.venda-container {
+    background-color: #F3C6C9; /* Cor de fundo rosa do card */
+    width: 100%;
+    max-width: 700px;
+    padding: 35px 45px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Título superior esquerdo */
+.titulo-pagina {
+    font-size: 28px;
+    color: #1A1A1A;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+/* Alinhamento recuado dos formulários */
+.formulario-venda {
+    width: 100%;
+    padding-left: 15%; /* Mantém o recuo padrão do seu design */
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Configuração dos Grupos de Input */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    font-size: 22px;
+    color: #1A1A1A;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 25px; /* Bordas estilo pílula */
+    background-color: #FFFFFF;
+    padding: 0 20px;
+    font-size: 18px;
+    outline: none;
+}
+
+/* Customização dos Campos de Seleção (Selects) */
+.input-group select {
+    appearance: none; /* Esconde a seta nativa do sistema operacional */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding-right: 55px;
+}
+
+/* Criação da Seta Customizada Vazada (Triângulo Rosa) */
+.select-wrapper::before {
+    content: "";
+    position: absolute;
+    right: 32px;
+    bottom: 12px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #E26D6D; /* Cor da borda da seta */
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Máscara interna para tornar o triângulo vazado */
+.select-wrapper::after {
+    content: "";
+    position: absolute;
+    right: 34px;
+    bottom: 15px;
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 17px solid #FFFFFF; /* Mesma cor de fundo do input */
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Ajuste específico para a seta do Cliente que fica mais abaixo no layout da imagem */
+.cliente-group::before {
+    bottom: -15px;
+}
+.cliente-group::after {
+    bottom: -12px;
+}
+
+/* Bloco vazio esbranquiçado inferior que precede o botão */
+.bloco-vazio-inferior {
+    width: 100%;
+    height: 45px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+/* Botão Salvar Venda */
+.btn-salvar {
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    border: none;
+    border-radius: 25px;
+    width: 55%;
+    height: 46px;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px auto 0 auto;
+    display: block;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-salvar:hover {
+    background-color: #F5F5F5;
+}
+
+.btn-salvar:active {
+    transform: scale(0.98);
+}
+
+/* Responsividade para Celulares/Telemóveis */
+@media (max-width: 600px) {
+    .formulario-venda {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .titulo-pagina {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .btn-salvar {
+        width: 80%;
+    }
+    
+    .cliente-group::before {
+        bottom: 12px;
+    }
+    .cliente-group::after {
+        bottom: 15px;
+    }
+}

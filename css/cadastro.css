@@ -1,0 +1,93 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+body {
+    background-color: #E8B4B8; /* Tom de fundo ligeiramente mais escuro para destacar o card */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container do Formulário (O card rosa da imagem) */
+.cadastro-container {
+    background-color: #F3C6C9; /* Cor rosa do fundo do formulário */
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 50px;
+    border-radius: 20px; /* Bordas arredondadas do card principal */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Grupos de Input (Alinhamento à esquerda) */
+.input-group {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 22px;
+    color: #1A1A1A;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 25px; /* Inputs com formato de pílula bem arredondada */
+    background-color: #FFFFFF; /* Inputs brancos purificados */
+    padding: 0 20px;
+    font-size: 18px;
+    outline: none;
+    transition: transform 0.2s;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Botão Cadastrar Agora */
+.btn-cadastrar {
+    background-color: #FFFFFF; /* Botão todo branco conforme a imagem */
+    color: #1A1A1A;
+    border: none;
+    border-radius: 25px;
+    width: 65%;
+    height: 48px;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 25px auto 0 auto;
+    display: block; /* Garante a centralização horizontal */
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-cadastrar:hover {
+    background-color: #F5F5F5;
+}
+
+.btn-cadastrar:active {
+    transform: scale(0.98);
+}
+
+/* Ajustes para telas pequenas (Celulares) */
+@media (max-width: 480px) {
+    .cadastro-container {
+        padding: 25px 20px;
+    }
+    
+    .btn-cadastrar {
+        width: 80%;
+        font-size: 18px;
+    }
+}

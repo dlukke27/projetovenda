@@ -1,0 +1,171 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+body {
+    background-color: #E8B4B8; /* Cor externa do fundo */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Card Principal Rosa */
+.vendedor-container {
+    background-color: #F3C6C9; /* Tom rosa claro padrão do seu sistema */
+    width: 100%;
+    max-width: 650px;
+    min-height: 520px;
+    padding: 30px 40px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Título no canto superior esquerdo */
+.titulo-pagina {
+    font-size: 28px;
+    color: #1A1A1A;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Formulário deslocado para a direita */
+.formulario-vendedor {
+    width: 100%;
+    padding-left: 15%; /* Mantém o alinhamento das telas anteriores */
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Grupos de Input e Labels */
+.input-group {
+    margin-bottom: 22px;
+    text-align: left;
+    position: relative; /* Importante para posicionar a seta customizada */
+}
+
+.input-group label {
+    display: block;
+    font-size: 22px;
+    color: #1A1A1A;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 25px; /* Formato pílula */
+    background-color: #FFFFFF;
+    padding: 0 20px;
+    font-size: 18px;
+    outline: none;
+}
+
+/* Customização específica do campo SELECT (Equipe) */
+.input-group select {
+    appearance: none; /* Remove a seta padrão do navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding-right: 50px; /* Evita que o texto fique por cima da seta */
+}
+
+/* Criando o triângulo linear vermelho idêntico à imagem através de CSS puro */
+.select-wrapper::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 12px;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 22px solid transparent; /* Camada invisível para criar a borda */
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Renderização da Seta Triangular Vazada (Borda Vermelha) */
+.select-wrapper::before {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 12px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 18px solid #E26D6D; /* Cor rosa/vermelha da seta linear */
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Hack simples para fazer o triângulo parecer vazado/linear */
+.select-wrapper::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 14px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #FFFFFF; /* Corta o meio com a cor branca de fundo */
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Botão Salvar Vendedor */
+.btn-salvar {
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    border: none;
+    border-radius: 25px;
+    width: 55%;
+    height: 46px;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 35px auto 10px auto;
+    display: block;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-salvar:hover {
+    background-color: #F5F5F5;
+}
+
+.btn-salvar:active {
+    transform: scale(0.98);
+}
+
+/* Responsividade para Telemóveis */
+@media (max-width: 600px) {
+    .formulario-vendedor {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .titulo-pagina {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .btn-salvar {
+        width: 80%;
+    }
+}

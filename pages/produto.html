@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Produto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/produto.css">
+</head>
+<body>
+
+    <div class="produto-container">
+        <h2 class="titulo-pagina">CADASTRO DO PRODUTO</h2>
+
+        <form class="formulario-produto">
+            <div class="input-group">
+                <label for="nome-produto">NOME DO PRODUTO</label>
+                <input type="text" id="nome-produto" required>
+            </div>
+
+            <div class="input-group">
+                <label for="valor-produto">VALOR DO PRODUTO</label>
+                <input type="text" id="valor-produto" placeholder="R$ 0,00" required>
+            </div>
+
+            <button type="submit" class="btn-salvar">SALVAR PRODUTO</button>
+        </form>
+    </div>
+
+</body>
+</html>

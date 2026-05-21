@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da Venda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/venda.css">
+</head>
+<body>
+
+    <div class="venda-container">
+        <h2 class="titulo-pagina">CADASTRO DA VENDA</h2>
+
+        <form class="formulario-venda">
+            <div class="input-group">
+                <label for="data-venda">DATA DA VENDA</label>
+                <input type="text" id="data-venda" placeholder="DD/MM/AAAA" required>
+            </div>
+
+            <div class="input-group">
+                <label for="qtd-venda">QUANTIDADE DA VENDA</label>
+                <input type="number" id="qtd-venda" min="1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="valor-venda">VALOR DA VENDA</label>
+                <input type="text" id="valor-venda" placeholder="R$ 0,00" required>
+            </div>
+
+            <div class="input-group select-wrapper">
+                <label for="vendedor-venda">VENDEDOR</label>
+                <select id="vendedor-venda" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="1">Lucas Henrique</option>
+                    <option value="2">Ana Souza</option>
+                </select>
+            </div>
+
+            <div class="input-group select-wrapper">
+                <label for="produto-venda">PRODUTO</label>
+                <select id="produto-venda" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="1">Produto A</option>
+                    <option value="2">Produto B</option>
+                </select>
+            </div>
+
+            <div class="input-group select-wrapper cliente-group">
+                <label for="cliente-venda">CLIENTE</label>
+                <select id="cliente-venda" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="1">Carlos Silva</option>
+                    <option value="2">Maria Oliveira</option>
+                </select>
+            </div>
+
+            <div class="bloco-vazio-inferior"></div>
+
+            <button type="submit" class="btn-salvar">SALVAR VENDA</button>
+        </form>
+    </div>
+
+</body>
+</html>
